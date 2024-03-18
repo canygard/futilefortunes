@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Picker</title>
+    <script>
+        function getRandomWord(list) {
+            return list[Math.floor(Math.random() * list.length)];
+        }
+
+        function generateRandomWords() {
+            var lists = [
+                ["word1a", "word1b", "word1c", "word1d"],
+                ["word2a", "word2b", "word2c", "word2d"],
+                ["word3a", "word3b", "word3c", "word3d"],
+                ["word4a", "word4b", "word4c", "word4d"],
+                ["word5a", "word5b", "word5c", "word5d"],
+                ["word6a", "word6b", "word6c", "word6d"],
+                ["word7a", "word7b", "word7c", "word7d"]
+            ];
+
+            var results = [];
+
+            lists.forEach(function(list) {
+                var randomWord = getRandomWord(list);
+                results.push(randomWord);
+            });
+
+            document.getElementById('result').innerText = results.join(', ');
+        }
+    </script>
+</head>
+<body>
+    <h1>Random Word Picker</h1>
+    <button onclick="generateRandomWords()">Generate Random Words</button>
+    <p id="result"></p>
+</body>
+</html>
