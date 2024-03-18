@@ -28,13 +28,24 @@
             });
 
             document.getElementById('result').innerText = results.join(', ');
+			
+             // Scroll to the "fortune" div
+            var fortuneDiv = document.getElementById('fortune');
+            fortuneDiv.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 <link href="fortune.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	
+	<div id="title">
+	
     <h1>Random Word Picker</h1>
     <button onclick="generateRandomWords()">What's in Your Future?</button>
+	</div>
+	
+	<div id="fortune">
     <p id="result"></p>
+		</div>
 </body>
 </html>
