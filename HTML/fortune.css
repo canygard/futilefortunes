@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1 {
+	
+	color: transparent;
+	background-image: url("images/test-logo.png");
+	background-size: 100%;
+	width: 500px;
+	height: 200px;
+	margin: 0 auto;
+	
+}
+
+button {
+	
+	margin: 0 auto;
+	display: block;
+	
+}
+
+body {
+	
+	background-color: black;
+}
