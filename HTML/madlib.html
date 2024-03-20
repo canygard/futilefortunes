@@ -28,21 +28,33 @@
                 results += randomWord + ' ';
             });
 
-            document.getElementById('result').innerText = results.trim();
-			
-             // Scroll to the "fortune" div
+            // Scroll to the "fortune" div immediately
             var fortuneDiv = document.getElementById('fortune');
             fortuneDiv.scrollIntoView({ behavior: 'smooth' });
+
+            // Delay the appearance of results after 3 seconds (3000 milliseconds)
+            setTimeout(function() {
+                var resultElement = document.getElementById('result');
+                resultElement.innerText = results.trim();
+                resultElement.style.opacity = 1; // Set opacity to 1 to trigger the animation
+            }, 4000); // Adjust the delay time as needed
         }
     </script>
 </head>
 <body>
     <div id="title">
-        <h1>Futile Fortunes</h1>
+        <h1>Random Word Picker</h1>
         <button onclick="generateRandomWords()">What's in Your Future?</button>
     </div>
-    <div id="fortune">
-        <p id="result"></p>
+    
+    <div id="videoDiv"> 
+        <video id="video1" preload="" autoplay="" muted="" playsinline="" loop="">
+            <source src="8ball.mp4" type="video/mp4">
+        </video> 
+        
+        <div id="fortune" class="styling">
+            <p id="result"></p>
+        </div>
     </div>
 </body>
 </html>
