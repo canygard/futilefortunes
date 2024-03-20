@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Word Picker</title>
+    <title>Futile Fortunes</title>
+    <link href="fortune.css" rel="stylesheet" type="text/css">
     <script>
         function getRandomWord(list) {
             return list[Math.floor(Math.random() * list.length)];
@@ -11,41 +12,37 @@
 
         function generateRandomWords() {
             var lists = [
-                ["word1a", "word1b", "word1c", "word1d"],
-                ["word2a", "word2b", "word2c", "word2d"],
-                ["word3a", "word3b", "word3c", "word3d"],
-                ["word4a", "word4b", "word4c", "word4d"],
-                ["word5a", "word5b", "word5c", "word5d"],
-                ["word6a", "word6b", "word6c", "word6d"],
-                ["word7a", "word7b", "word7c", "word7d"]
+                ["Due to", "Because of", "After", "As a consequence of", "As a result of", "In consequence of", "In light of", "Because of", "As a reprecussion of", "As a reprecussion of", "Based on"],
+                ["the speed at which you respond to text messages, ", "the color of shirt you most frequently wear, ", "your history of failing to obey posted signage, "],
+                ["you will find yourself ", "you are likely to be ", "it's almost certain that you will be "],
+                ["in legal trouble, ", "in search of a new job, ", "starting a new educational journey, ",  "in debt to an organized crime group, ", "deplatformed on social media, "],
+                ["which will", "which will undoubtedly "],
+                ["challenge your beliefs about ", "force you to reckon with "],
+                ["urban planning ", "the nature of friendship ", "a relationship from your past ", "your role in your community ", "the passage of time ", "the way you are perceived "]
             ];
 
-            var results = [];
+            var results = "";
 
             lists.forEach(function(list) {
                 var randomWord = getRandomWord(list);
-                results.push(randomWord);
+                results += randomWord + ' ';
             });
 
-            document.getElementById('result').innerText = results.join(', ');
+            document.getElementById('result').innerText = results.trim();
 			
              // Scroll to the "fortune" div
             var fortuneDiv = document.getElementById('fortune');
             fortuneDiv.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-<link href="fortune.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	
-	<div id="title">
-	
-    <h1>Random Word Picker</h1>
-    <button onclick="generateRandomWords()">What's in Your Future?</button>
-	</div>
-	
-	<div id="fortune">
-    <p id="result"></p>
-		</div>
+    <div id="title">
+        <h1>Futile Fortunes</h1>
+        <button onclick="generateRandomWords()">What's in Your Future?</button>
+    </div>
+    <div id="fortune">
+        <p id="result"></p>
+    </div>
 </body>
 </html>
