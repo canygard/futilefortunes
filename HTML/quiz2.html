@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sentence Display</title>
+<link href="fortune.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Random Sentence</h1>
+
+<p id="randomSentence"></p>
+
+<script>
+// Array of sentences
+const sentences = [
+     "Do you believe in the existence of aliens?",
+    "Do you believe in the existence of ghosts?",
+    "Would you kill someone for 1 million dollars?",
+    "Would you slap someone for 1 million dollars?",
+    "If given the chance, would you restart your life with your current memories and knowledge?",
+	"Have you ever danced in the rain?",
+	"Do you believe in love at first sight?"
+	
+];
+
+// Get a random index
+const randomIndex = Math.floor(Math.random() * sentences.length);
+
+// Get the random sentence
+const randomSentence = sentences[randomIndex];
+
+// Display the random sentence
+document.getElementById("randomSentence").innerText = randomSentence;
+</script>
+
+<div class="options">
+<a href="quiz3.html"><button>Yes</button></a>
+<a href="quiz3.html"><button>No</button></a>
+</div>
+</body>
+</html>

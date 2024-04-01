@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sentence Display</title>
+<link href="fortune.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Random Sentence</h1>
+
+<p id="randomSentence"></p>
+
+<script>
+// Array of sentences
+const sentences = [
+    "If you died today, would you be satisfied with the life you lived?",
+    "How do you know you are not dreaming right now?",
+    "How do you know youre doing the right thing?",
+];
+
+  // Get a random index
+    const randomIndex = Math.floor(Math.random() * sentences.length);
+
+    // Get the random sentence
+    const randomSentence = sentences[randomIndex];
+
+    // Display the random sentence
+    document.getElementById("randomSentence").innerText = randomSentence;
+
+    // Function to validate text input before submitting
+    function validateInput() {
+        const userInput = document.getElementById("textInput").value;
+        
+        // Check if the input is empty
+        if (userInput.trim() === "") {
+            alert("Please type something before submitting.");
+            event.preventDefault(); // Prevent the default action (navigation to "quiz4.html")
+        }
+    }
+</script>
+
+<label for="textInput">Enter Text:</label>
+<input type="text" id="textInput" name="textInput" placeholder="Type your answer here">
+<div class="options">
+    <a href="results.html"><button onclick="validateInput()">Submit</button></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sentence Display</title>
+<link href="fortune.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Random Sentence</h1>
+
+<p id="randomSentence"></p>
+
+<script>
+// Array of sentences
+const sentences = [
+    "Did you eat breakfast today?",
+	"Are you wearing shoes right now?",
+	"Are your socks matching right now?",
+];
+
+// Get a random index
+const randomIndex = Math.floor(Math.random() * sentences.length);
+
+// Get the random sentence
+const randomSentence = sentences[randomIndex];
+
+// Display the random sentence
+document.getElementById("randomSentence").innerText = randomSentence;
+</script>
+
+<div class="options">
+<a href="quiz2.html"><button>Yes</button></a>
+<a href="quiz2.html"><button>No</button></a>
+</div>
+</body>
+</html>
