@@ -76,11 +76,9 @@ a {
 }
 
 body {
-	
-	height: 100%;
-	margin: 0;
+	margin: 40px;
 	background-color: black;
-	padding: 100px;
+	background-image: url("images/background.jpeg");
 	
 }
 
@@ -100,6 +98,7 @@ p {
 }
 
 #randomSentence {
+	margin-top: 160px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
 	font-size: 30px;
@@ -107,7 +106,7 @@ p {
 }
 
 
-#videoDiv {width: 100%; height: 360px; position: relative;}
+#videoDiv {width: 100%; height: 360px; position: relative; margin-top: 50%; margin-bottom: 80px;}
 
 #video1 {
     margin: auto;
@@ -144,5 +143,11 @@ height: 100%;}
     opacity: 0; /* Initially set opacity to 0 */
     animation: fadeIn 2s ease forwards; /* Apply the fade-in animation */
 }
+
+#results-button {
+	width: 300px;
+}
+
+
 
 
