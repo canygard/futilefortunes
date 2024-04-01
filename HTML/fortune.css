@@ -11,8 +11,10 @@ h1 {
 	color: transparent;
 	background-image: url("images/test-logo.png");
 	background-size: 100%;
-	width: 500px;
-	height: 185px;
+	background-repeat: no-repeat;
+	padding: 60px;
+	width: 90%;
+	height: auto;
 	margin: 0 auto;
 	margin-top: 0px;
 	margin-bottom: 50px;
@@ -28,25 +30,44 @@ h1 {
 }
 button {
 	
-	margin: 0 auto;
+	margin: 0 50px;
 	display: inline-block;
-	background-color: white;
+	background-color: #9664c4;
 	width: 150px;
 	height: 70px;
-	border-radius: 25px;
+	border-radius: 40px;
+	border: none;
+	color: #fff;
+
+	font-size: 25px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
 	
-	
-	
+}
+
+button:hover {
+	background-color: #9829ff
 }
 
 #textInput {
 	
 	display: block;
-	width: 300px;
-	height: 50px;
+	width: 500px;
+	height: 55px;
 	margin: 0 auto;
 	margin-top: 25px;
+	border-radius: 30px;
+	color: #aaa;
+	border: 2px solid #fff;
+	background-color: black;
+	outline: none;
+	text-indent: 15px;
+	font-size: 25px;
 }
+
+#textInput:hover { 
+	border-color: #9829ff; /* A pleasant green border on hover */ 
+} 
 
 a {
 	
@@ -60,6 +81,7 @@ body {
 	margin: 0;
 	background-color: black;
 	padding: 100px;
+	
 }
 
 p {
@@ -75,6 +97,13 @@ p {
 	height: 100%;
 	width: 100%;
 	background-color: black;
+}
+
+#randomSentence {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+	font-style: normal;
 }
 
 
