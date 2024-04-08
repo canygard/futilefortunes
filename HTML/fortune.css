@@ -42,11 +42,17 @@ button {
 	font-size: 25px;
 	font-family: "Roboto", sans-serif;
 	font-weight: 700;
+	transition: transform .2s;
+	transition-timing-function: ease;
 	
 }
 
 button:hover {
-	background-color: #9829ff
+	background-color: #9829ff;
+	
+	/* height: 90px; */
+	transform: scale(1.3);
+	
 }
 
 #textInput {
@@ -103,7 +109,26 @@ p {
 	font-weight: 700;
 	font-size: 30px;
 	font-style: normal;
+
+	animation-duration: 0.5s;
+  	animation-name: slidein;
 }
+
+.question-container {
+	overflow: hidden;
+}
+
+@keyframes slidein {
+	from {
+	  margin-top: 100%;
+	  height: 300%;
+	}
+  
+	to {
+	  margin-top: 160px;
+	  height: 100%;
+	}
+  }
 
 
 #videoDiv {width: 100%; height: 360px; position: relative; margin-top: 50%; margin-bottom: 80px;}
@@ -149,6 +174,21 @@ height: 100%;}
 	margin-top: 160px;
 	width: 300px;
 }
+
+#begin-button button {
+	width: 500px;
+}
+
+#begin-button button:hover{ 
+	animation: shake 75ms infinite;
+	animation-timing-function: linear;   
+  }
+  
+  @keyframes shake {
+	0% { transform: rotate(0.5deg); }
+	50% { transform: rotate(-0.5deg); }
+	100% { transform: rotate(0.5deg); }
+  }
 
 
 
