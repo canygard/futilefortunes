@@ -13,19 +13,163 @@
 
 </head>
 <body>
+    
     <video autoplay muted loop id="background-video">
         <source src="images/starfield.mp4" type="video/mp4">
     </video>
     <div class="content">
         <h1></h1>
 
-        <div class="question-container">
-        <p id="randomSentence"> Unleash your digital self! Get your futile fortune.</p>
+        <div>
+        <p class="intro"> Unleash your digital self! Get your futile fortune.</p>
         </div>
 
         <div class="options">
-        <a href="quiz1.html" id="begin-button"><button> Begin </button></a>
+        <a href="#q1-div" id="begin-button"><button> Begin </button></a>
         </div>
+        <div id="question1"class="spacer"></div>
+
+        <div id="q1-div" class="question-container">
+            <p id="q1" class="randomSentence"></p>
+            
+            <script>
+            // Array of sentences
+            const sentence1 = [
+                "Did you eat breakfast today?",
+                "Are you wearing shoes right now?",
+                "Are your socks matching right now?",
+            ];
+            
+            // Get a random index
+            const randomIndex = Math.floor(Math.random() * sentence1.length);
+            
+            // Get the random sentence
+            const randomSentence = sentence1[randomIndex];
+            
+            // Display the random sentence
+            document.getElementById("q1").innerText = randomSentence;
+            </script>
+            
+            
+            <div class="options">
+            <a href="#q2-div"><button>Yes</button></a>
+            <a href="#q2-div"><button>No</button></a>
+            </div>
+            </div>
+            
+            
+            
+            <div id="q2-div" class="question-container">
+                <p id="q2" class="randomSentence"></p>
+                
+                <script>
+                // Array of sentences
+                const sentence2 = [
+                    "Do you believe in the existence of aliens?",
+                    "Do you believe in the existence of ghosts?",
+                    "Would you kill someone for 1 million dollars?",
+                    "Would you slap someone for 1 million dollars?",
+                    "If given the chance, would you restart your life with your current memories and knowledge?",
+                    "Have you ever danced in the rain?",
+                    "Do you believe in love at first sight?"
+                ];
+                
+                // Get a random index
+                const randomIndex2 = Math.floor(Math.random() * sentence2.length);
+                
+                // Get the random sentence
+                const randomSentence2 = sentence2[randomIndex2];
+                
+                // Display the random sentence
+                document.getElementById("q2").innerText = randomSentence2;
+                </script>
+                
+                
+                <div class="options">
+                <a href="#q3-div"><button>Yes</button></a>
+                <a href="#q3-div"><button>No</button></a>
+                </div>
+            </div>
+            
+            <div id="q3-div" class="question-container">
+                <p id="q3" class="randomSentence"></p>
+                
+                <script>
+                // Array of sentences
+                const sentence3 = [
+                "If you could have any superpower for a day, what would it be?",
+                "Where did your strangest dream take place?",
+                "Where do you go when you need to be alone and at peace?",
+                "Who would you call if you went to jail?",
+                "If I gave you ice cream right now, what flavor would you want?"
+                ];
+                
+                // Get a random index
+                const randomIndex3 = Math.floor(Math.random() * sentence3.length);
+                
+                // Get the random sentence
+                const randomSentence3 = sentence3[randomIndex3];
+                
+                // Display the random sentence
+                document.getElementById("q3").innerText = randomSentence3;
+            
+                // Function to validate text input before submitting
+                function validateInput() {
+                    const userInput = document.getElementById("textInput").value;
+                    
+                    // Check if the input is empty
+                    if (userInput.trim() === "") {
+                        alert("Please type something before submitting.");
+                        event.preventDefault(); // Prevent the default action (navigation to "quiz4.html")
+                    }
+                }
+                </script>
+                
+                
+                <label for="textInput">Enter Text:</label>
+                <input type="text" id="textInput" name="textInput" placeholder="Type your answer here">
+                <div class="options">
+                    <a href="#q4-div"><button onclick="validateInput()">Submit</button></a>
+                </div>
+            </div>
+            
+            
+            <div id="q4-div" class="question-container">
+                <p id="q4" class="randomSentence"></p>
+                
+                <script>
+                // Array of sentences
+                const sentence4 = [
+                "If you died today, would you be satisfied with the life you lived?",
+                "How do you know you are not dreaming right now?",
+                "How do you know you're doing the right thing?",
+                ];
+                
+                // Get a random index
+                const randomIndex4 = Math.floor(Math.random() * sentence4.length);
+                
+                // Get the random sentence
+                const randomSentence4 = sentence4[randomIndex4];
+                
+                // Display the random sentence
+                document.getElementById("q4").innerText = randomSentence4;
+            
+                </script>
+                
+                
+                <label for="textInput">Enter Text:</label>
+                <input type="text" id="textInput" name="textInput" placeholder="Type your answer here">
+                <div class="options">
+                    <a href="results.html"><button onclick="validateInput()">Submit</button></a>
+                </div>
+            </div>
+
+
+
+
+
+
+
     </div>
 </body>
 </html>
