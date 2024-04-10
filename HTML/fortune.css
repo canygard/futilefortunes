@@ -56,7 +56,7 @@ button:hover {
 	
 }
 
-#textInput {
+.textInput {
 	
 	display: block;
 	width: 500px;
@@ -72,7 +72,7 @@ button:hover {
 	font-size: 25px;
 }
 
-#textInput:hover { 
+.textInput:hover { 
 	border-color: #9829ff; /* A pleasant green border on hover */ 
 } 
 
