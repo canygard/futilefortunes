@@ -29,6 +29,11 @@ h1 {
 	padding-top: 50px;
 	text-align: center;
 }
+
+#result-options {
+	padding-top: 25px;
+}
+
 button {
 	
 	margin: 0 50px;
@@ -181,6 +186,11 @@ height: 100%;}
 #results-button {
 	margin-top: 160px;
 	width: 300px;
+}
+
+#restart-button {
+	
+
 }
 
 #begin-button button {

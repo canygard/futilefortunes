@@ -23,6 +23,13 @@
             resultElement.innerText = results.trim();
             resultElement.style.opacity = 1; // Set opacity to 1 to trigger the animation
         }, 4000); // Adjust the delay time as needed
+
+        let vid = document.getElementById("video1"); 
+        vid.play(); 
+    }
+
+    function restart() {
+        reload(true);
     }
 </script>
 
@@ -198,16 +205,20 @@
             </div>
 
 
-           <- id="videoDiv"> 
-        <video id="video1" preload="" autoplay="" muted="" playsinline="">
-            <source src="LoadingScreen.mp4" type="video/mp4">
+           <div id="videoDiv"> 
+        <video id="video1">
+            <source src="generatingscreen_updated.mp4" type="video/mp4">
         </video> 
         
         <div id="fortune" class="styling">
             <p id="result"></p>
         </div>
 
-        <!-- TO DO: add restart button -->
+        <div id="restart-div" >
+            <div class="options" id="result-options">
+                <a href="index.html"> <button onclick="restart()" id="restart-button">Restart</button></a>
+            </div>
+        </div>
     </div>
 
 
